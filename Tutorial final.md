@@ -444,7 +444,8 @@ El archivo <i>image-list.component.ts</i> final debe verse así:
 34. Ahora vamos a hacer interactiva la galeria, para esto necesitamos otro componente, hijo de gallery. Nos ubicamos en gallery <code>cd src/app/gallery</code>
 y creamos el nuevo componente <code>ng g c image-detail</code><br>
 35. Vamos al archivo image-list.component.html y le agregamos un evento de click al selector <i><app-image></i>: <br>
-<code><app-image *ngFor="let image of images" [image]="image" (click)="onSelect(image)"></app-image></code><br>
+<code>&tl;app-image *ngFor="let image of images" [image]="image" (click)="onSelect(image)"></app-image></code>
+    <br>
 36. Ahora crearemos el método onSelected(). Vamoas al archivo <i>image-list.component.ts</i> y en el <i>export</i> bajo el array <i>image</i>
 agregamos <code>selectedImage: Image;</code>, y en la zona de las funciones, abajo de <i>ngOnInit</i> añadimos la funcion: <br>
 <code>onSelect(image: Image) {<br>
